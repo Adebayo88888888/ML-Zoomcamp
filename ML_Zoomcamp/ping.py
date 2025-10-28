@@ -1,0 +1,2 @@
+def pinging():
+    return "PONG"
