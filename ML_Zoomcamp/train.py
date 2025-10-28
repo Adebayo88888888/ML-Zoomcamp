@@ -23,7 +23,7 @@ output_file = f'model_C={C}.bin'
 
 # data preparation
 
-df = pd.read_csv('data-week-3.csv')
+df = pd.read_csv('data/data-week-3.csv')
 
 df.columns = df.columns.str.lower().str.replace(' ', '_')
 
