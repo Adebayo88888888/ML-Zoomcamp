@@ -14,7 +14,7 @@ import pickle
 
 df = pd.read_csv('data/dune_good_vs_bad_trader.csv')
 # Shuffle the entire DataFrame
-df = shuffle(df, random_state=42).reset_index(drop=True)
+df = shuffle(df, random_state=42)
 
 # Remove emojis and the space after them
 df['target_variable'] = df['target_variable'].str.replace(r'^[🔴🟢]\s*', '', regex=True)
