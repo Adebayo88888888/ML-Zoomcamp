@@ -5,20 +5,20 @@ FROM python:3.12-slim
 WORKDIR /app
 
 # Install pipenv
-RUN pip install pipenv
+RUN pip install --no-cache-dir pipenv
 
-# Copy Pipfile and lock file first for dependency caching
+# Copy dependency files first for caching
 COPY Pipfile Pipfile.lock* ./
 
 # Install dependencies system-wide
-RUN pipenv install --system --deploy
+RUN pipenv install --system --deploy --ignore-pipfile
 
-# Copy app files
-COPY predict-service.py .
+# Copy application files
+COPY predict_service.py .
 COPY good_bad_trader_log_reg.bin .
 
 # Expose FastAPI port
 EXPOSE 8000
 
-# Run the service
-CMD ["uvicorn", "predict-service:app", "--host", "0.0.0.0", "--port", "8000"]
+# Run the FastAPI service
+CMD ["uvicorn", "predict_service:app", "--host", "0.0.0.0", "--port", "8000"]

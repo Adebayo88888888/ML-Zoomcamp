@@ -3,11 +3,11 @@ import requests
 wallet_id = "0x94a5458bad9b21190f42a392512845707d91182f"
 
 
-host = 'localhost:8000'
+host = 'trader-service-env.eba-i2z6eidw.eu-west-1.elasticbeanstalk.com'
 url = f'http://{host}/predict'
 
 trader = {
-    'active_weeks': 9,
+    'active_weeks': 92,
     'total_volume': 761,
     'trader_activity_status' : 'Middle Value Trader',
     'trader_weekly_frequency_status': 'OG',
