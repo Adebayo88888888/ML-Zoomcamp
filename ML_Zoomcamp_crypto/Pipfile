@@ -9,6 +9,7 @@ pandas = "*"
 fastapi = "*"
 uvicorn = "*"
 scikit-learn = "*"
+requests = "*"
 
 [dev-packages]
 
