@@ -1,5 +1,5 @@
 import pickle
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request # text: ignore
 from fastapi.responses import JSONResponse
 
 model_file = 'good_bad_trader_log_reg.bin'
